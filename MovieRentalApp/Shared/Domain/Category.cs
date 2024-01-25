@@ -8,7 +8,8 @@ namespace MovieRentalApp.Shared.Domain
 {
     public class Category : BaseDomainModel
     {
-        public string? Name { get; set; }
-
+        public int CategoryID { get; set; }
+        public string Name { get; set; }
+        public DateTime LastUpdated { get; set; }
     }
 }

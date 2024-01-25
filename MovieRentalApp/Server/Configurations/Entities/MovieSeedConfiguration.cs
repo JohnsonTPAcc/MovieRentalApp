@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MovieRentalApp.Shared.Domain;
-using Microsoft.EntityFrameworkCore;
-using System.Drawing;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using MovieRentalApp.Shared.Domain;
 
 namespace MovieRentalApp.Server.Configurations.Entities
 {

@@ -11,13 +11,12 @@ namespace MovieRentalApp.Shared.Domain
         public decimal? LateFee { get; set; } // Nullable in case there is no late fee
 
         // Navigation property to the Movie entity
-        public virtual Movie Movie { get; set; }
+        public virtual Movie? Movie { get; set; }
         public int MovieId { get; set; } // Foreign key to the Movie table
 
         // Navigation property to the Customer entity
-        public virtual Customer Customer { get; set; }
+        public virtual Customer? Customer { get; set; }
         public int CustomerId { get; set; } // Foreign key to the Customer table
-        public string? CreatedBy { get; set; }
-        public string? UpdatedBy { get; set; }
+       
     }
 }

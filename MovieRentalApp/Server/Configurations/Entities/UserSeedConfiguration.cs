@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using MovieRentalApp.Server.Models;
 namespace MovieRentalApp.Server.Configurations.Entities
 {
     public class UserSeedConfiguration : IEntityTypeConfiguration<ApplicationUser>
@@ -10,7 +9,7 @@ namespace MovieRentalApp.Server.Configurations.Entities
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
             var hasher = new PasswordHasher<ApplicationUser>();
-            builder.HasData(
+            _ = builder.HasData(
             new ApplicationUser
             {
                 Id = "3781efa7-66dc-47f0-860f-e506d04102e4",

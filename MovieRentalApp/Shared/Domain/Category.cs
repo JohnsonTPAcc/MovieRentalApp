@@ -9,7 +9,7 @@ namespace MovieRentalApp.Shared.Domain
     public class Category : BaseDomainModel
     {
         public int CategoryID { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; } // Make nullable if it can be null
         public DateTime LastUpdated { get; set; }
     }
 }

@@ -9,8 +9,7 @@ namespace MovieRentalApp.Shared.Domain
     public class Make : BaseDomainModel
     {
         public string? Name { get; set; }
-        public string? CreatedBy { get; set; }
-
-        public string? UpdatedBy { get; set; }
+        public new string? CreatedBy { get; set; }
+        public new string? UpdatedBy { get; set; }
     }
 }

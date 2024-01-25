@@ -8,15 +8,15 @@ namespace MovieRentalManagement.Shared.Domain
     public class Staff : BaseDomainModel
     {
         [Required]
-        public string StaffName { get; set; }
+        public string? StaffName { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
         [EmailAddress]
-        public string StaffEmail { get; set; }
+        public string? StaffEmail { get; set; }
 
         [Required]
-        public string Username { get; set; }
+        public string? Username { get; set; }
 
         public DateTime LastUpdated { get; set; }
 

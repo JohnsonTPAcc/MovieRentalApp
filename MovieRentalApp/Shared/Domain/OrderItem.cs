@@ -25,6 +25,6 @@ namespace MovieRentalApp.Shared.Domain
         public int OrderId { get; set; }
 
         // Navigation property for Order
-        public virtual Order Order { get; set; }
+        public virtual Order? Order { get; set; }
     }
 }

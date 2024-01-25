@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieRentalApp.Shared.Domain
+﻿namespace MovieRentalApp.Shared.Domain
 {
     public abstract class BaseDomainModel
     {

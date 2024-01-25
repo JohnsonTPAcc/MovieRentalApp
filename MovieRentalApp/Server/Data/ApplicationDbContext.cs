@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MovieRentalApp.Server.Models;
+using MovieRentalApp.Shared.Domain;
 
 namespace MovieRentalApp.Server.Data
 {
@@ -13,5 +14,7 @@ namespace MovieRentalApp.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+
+        public DbSet <Movie> Movies { get; set; }
     }
 }

@@ -2,10 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Duende.IdentityServer.EntityFramework.Options;
-using MovieRentalApp.Server.Configurations.Entities; // Make sure to include the namespace where your configurations are
 using MovieRentalApp.Shared.Domain;
 using MovieRentalApp.Server.Models;
-using System.Reflection.Emit;
+using MovieRentalManagement.Shared.Domain;
 
 namespace MovieRentalApp.Server.Data
 {
@@ -19,24 +18,13 @@ namespace MovieRentalApp.Server.Data
         }
 
         public DbSet<Movie> Movies { get; set; }
-        // Define other DbSets for your entities
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-
-            // Apply your configurations here
-            builder.ApplyConfiguration(new CategorySeedConfiguration());
-            builder.ApplyConfiguration(new MakeSeedConfiguration());
-            builder.ApplyConfiguration(new MovieSeedConfiguration());
-            builder.ApplyConfiguration(new RoleSeedConfiguration());
-            builder.ApplyConfiguration(new UserRoleSeedConfiguration());
-            builder.ApplyConfiguration(new UserSeedConfiguration());
-
-            // Other entity configurations...
-
-            
-        }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Make> Makes { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
 
     }
 }
